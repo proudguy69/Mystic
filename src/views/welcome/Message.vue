@@ -5,50 +5,39 @@
             <div class="content-name">
                 <div class="name">Mystic Bot</div> <div class="time">Today at 12:00 AM</div>
             </div>
-            <div class="content">Hello World..!</div>
+            <div class="content" v-if="message.content">{{message.content}}</div>
+            <div class="embeds" v-else v-for="embed in message.embeds">
+        <Embed :embed="embed" :content="true"/>
+    </div>
         </div>
     </div>
-    <div class="embeds">
-        <div class="embed">
-            <div class="title">
-                Hello World
-            </div>
-            <div class="description">
-                This is my special Embed
-            </div>
-        </div>
+    <div class="embeds" v-if="message.content" v-for="embed in message.embeds">
+        <Embed :embed="embed"/>
     </div>
 </template>
 
-
+<script>
+import Embed from './Embed.vue'
+export default {
+    props: ["message"],
+    components: { Embed },
+    data() {
+        return {
+            embeds: [],
+            content: ""
+        }
+    },
+    methods: {
+    }
+}
+</script>
 
 <style scoped>
-    .description {
-        font-size: 0.875rem;
-    }
-    .title {
-        font-size: 1rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-    }
-    p {
-        all: unset;
-    }
-    .embed {
-        display: inline-block;
-        max-width: 520px;
-        background-color: rgb(43, 45, 49);
-        padding: 8px 16px 16px 12px;
-        margin-left: calc(48px + 1rem);
-        border-radius: 4px;
-        border-left: 4px solid rgb(32, 34, 37);
-        display: inline-grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-    }
+
     .content {
     font-size: 1rem;
     margin-bottom: 4px;
+    white-space: pre-line;
     }
     .time {
     font-size: 0.75rem;
@@ -69,6 +58,7 @@
     .message {
     display: flex;
     gap: 1rem;
+    margin-bottom: 0.5rem;
     }
 
     .message-img {
