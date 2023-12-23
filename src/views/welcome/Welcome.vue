@@ -19,7 +19,9 @@
             </div>
         </div>
 
-        <div class="section"></div>
+        <div class="section">
+            <VariableSelector />
+        </div>
     </div>
 </template>
 
@@ -28,8 +30,9 @@
 import Message from './Message.vue'
 import MessageForum from './MessageForum.vue'
 import EmbedForum from './EmbedForum.vue'
+import VariableSelector from './VariableSelector.vue'
 export default {
-    components: { Message, MessageForum, EmbedForum},
+    components: { Message, MessageForum, EmbedForum, VariableSelector},
     data() {
         return {
             messages: []
