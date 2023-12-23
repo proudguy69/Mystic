@@ -8,9 +8,9 @@ tree = bot.tree
 fp = open("../settings.json")
 SETTINGS = json.load(fp)
 
-@bot.command()
+@bot.command(name="sync")
+@commands.is_owner()
 async def syncCommand(ctx):
-    if ctx.author.id != 973834864853909525: return # if not me, Kai, exit
     msg = await ctx.send("syncing...")             # Send sync message
     await tree.sync()                              # sync / commands
     await msg.edit(content="done!")                # edit the sync message to notify we are done
