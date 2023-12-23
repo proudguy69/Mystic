@@ -1,29 +1,25 @@
-# mystic-site
+# Mystic Project
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+# Goal:
+I plan to make a modular bot interface, 1 bot for 1 purpose, this is because
+statistically members prefer MORE bots then less, it diversifies / commands, and makse it 
+more over easier, So right now I am working on the dashboard pages for Mystic Levels and Mystic Welcomer,
+With plenty more to come
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
 
+## Make sure you have vue installed:
 ```sh
-npm install
+NPM install vue
 ```
-
-### Compile and Hot-Reload for Development
-
+## Compile live-test build
 ```sh
-npm run dev
+NPM run dev
 ```
-
-### Compile and Minify for Production
-
+## Compile for production
 ```sh
-npm run build
+NPM run build
 ```
