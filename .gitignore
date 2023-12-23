@@ -31,5 +31,7 @@ coverage
 
 *.tsbuildinfo
 
-# Other things, like environments
+# Python envs and test files
 /env
+**/__pycache__/
+/backend/test.py
